@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'wagtail.search',
     'wagtail.admin',
     'wagtail' if WAGTAIL_VERSION >= (3, 0) else 'wagtail.core',
-    'wagtail.contrib.modeladmin',
+    'wagtail_modeladmin' if WAGTAIL_VERSION >= (4, 2) else 'wagtail.contrib.modeladmin',
     'wagtail.contrib.styleguide',
 
     'modelcluster',
@@ -108,6 +108,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'sandbox.wsgi.application'
 
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 AUTH_USER_MODEL = 'user.User'
 
 
