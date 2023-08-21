@@ -30,7 +30,7 @@ def pytest_configure():
             "wagtail.search",
             "wagtail.admin",
             "wagtail" if WAGTAIL_VERSION >= (3, 0) else "wagtail.core",
-            "wagtail.contrib.modeladmin",
+            "wagtail_modeladmin" if WAGTAIL_VERSION >= (5, 0) else "wagtail.contrib.modeladmin",
             "modelcluster",
             "taggit",
             "django.contrib.admin",
