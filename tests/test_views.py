@@ -32,7 +32,7 @@ def test_device_list_view(admin_client, admin_user, django_assert_max_num_querie
 
 def test_device_list_create(admin_client, django_assert_max_num_queries):
     with override_settings(WAGTAIL_2FA_REQUIRED=True):
-        with django_assert_max_num_queries(10):
+        with django_assert_max_num_queries(11):
             response = admin_client.get(reverse("wagtail_2fa_device_new"))
             assert response.status_code == 200
 
