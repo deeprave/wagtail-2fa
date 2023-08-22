@@ -6,7 +6,7 @@ authors = ["Lab Digital <opensource@labdigital.nl>"]
 maintainers = ["Lab Digital <opensource@labdigital.nl>"]
 readme = "README.rst"
 license = "MIT"
-packages = [{include = "wagtail_2fa"}]
+packages = [{include = "src/wagtail_2fa"}]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Environment :: Web Environment",
@@ -27,7 +27,7 @@ homepage = "https://github.com/LabD/wagtail-2fa"
 documentation = "https://wagtail-2fa.readthedocs.io/en/latest/"
 
 [tool.poetry.dependencies]
-python = ">= 3.8"
+python = ">= 3.8.1"
 Django = ">=3.2"
 Wagtail = ">=2.15"
 django-otp = ">=0.8.1"
@@ -40,12 +40,13 @@ pytest = "^7.0"
 coverage = "^5.5"
 pytest-cov = "^2.12.1"
 pytest-django = "^4.4.0"
-flake8 = "^3.9.2"
 isort = "^5.9.3"
+flake8 = "==6.0"
 flake8-blind-except = "^0.2.0"
 flake8-debugger = "^4.0.0"
 django-debug-toolbar = "^4.2.0"
 pre-commit = "^3.3.3"
+pyproject-flake8 = "^6.0.0.post1"
 
 [tool.poetry.group.docs.dependencies]
 sphinx = ">=1.4.1"
@@ -54,6 +55,11 @@ sphinx_rtd_theme = ">=0.4.3"
 [tool.pytest.ini_options]
 minversion = "7.0"
 pythonpath = ["src", "tests"]
+
+[tool.flake8]
+max-line-length = 140
+max-complexity = 10
+extend-exclude = ["migrations","node_modules","static","templates","build"]
 
 [build-system]
 requires = ["poetry-core"]
