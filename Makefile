@@ -17,10 +17,10 @@ docs:
 	$(MAKE) -C docs html
 
 makemessages:
-	cd src/wagtail_2fa && django-admin makemessages -a
+	cd wagtail_2fa && django-admin makemessages -a
 
 compilemessages:
-	cd src/wagtail_2fa && django-admin compilemessages
+	cd wagtail_2fa && django-admin compilemessages
 
 release:
 	rm -rf dist/*
