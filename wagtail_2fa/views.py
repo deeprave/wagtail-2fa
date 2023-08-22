@@ -22,8 +22,8 @@ from django.views.generic import (
     DeleteView, FormView, ListView, UpdateView, View)
 from django_otp import login as otp_login
 from django_otp.plugins.otp_totp.models import TOTPDevice
-
 from wagtail import VERSION as WAGTAIL_VERSION
+
 from wagtail_2fa import forms, utils
 from wagtail_2fa.mixins import OtpRequiredMixin
 
