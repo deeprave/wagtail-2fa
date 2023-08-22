@@ -6,7 +6,7 @@ authors = ["Lab Digital <opensource@labdigital.nl>"]
 maintainers = ["Lab Digital <opensource@labdigital.nl>"]
 readme = "README.rst"
 license = "MIT"
-packages = [{include = "src/wagtail_2fa"}]
+packages = [{include = "wagtail_2fa", from = "src"}]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Environment :: Web Environment",
