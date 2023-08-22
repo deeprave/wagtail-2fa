@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "wagtail-2fa"
-version = "1.6.5"
+version = "1.7.0"
 description = "Two factor authentication for Wagtail"
 authors = ["Lab Digital <opensource@labdigital.nl>"]
 maintainers = ["Lab Digital <opensource@labdigital.nl>"]
